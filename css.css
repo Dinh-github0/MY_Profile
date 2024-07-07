@@ -3,6 +3,7 @@ body{
 }
 
 footer{
+    grid-area: footer;
     background: #1d2118;
     color: #ffffff;
     text-align: center;
@@ -10,11 +11,24 @@ footer{
 .container{
     display: grid;
     grid-template-areas:
-    "header" "header"
-    "sidebar" "main"
-    "footer" "footer"
+    "header header"
+    "sidebar main"
+    "footer footer"
     ;
+    grid-template-columns: 1fr 2fr;
 }
 header{
-
+    grid-area: header;
+}
+[sidebar]{
+    grid-area: sidebar;
+    background: blue;
+    height: 700px;
+    width: 20%;
+}
+main{
+    grid-area: main;
+    height: 700px;
+    width: 100%;
+    background: green;
 }
